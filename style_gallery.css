@@ -85,7 +85,7 @@ body {
     background: #333;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     border-radius: 30px;
     transition: 0.3s;
 }
@@ -358,4 +358,8 @@ body {
     color: #353434; /* 可調整顏色 */
     margin-left: 20px;
     
+}
+
+.text-container p {
+    font-size: 1.0em;
 }

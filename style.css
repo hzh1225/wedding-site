@@ -51,6 +51,7 @@ body {
     z-index: 1;
 }
 
+
 .hero h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -58,7 +59,7 @@ body {
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
@@ -66,6 +67,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    
 }
 
 .btn {
@@ -74,7 +76,8 @@ body {
     background: #333;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 1rem;
     border-radius: 30px;
     transition: 0.3s;
 }
