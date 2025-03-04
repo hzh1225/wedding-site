@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索婚紗照</title>
+    <link rel="stylesheet" href="style_gallery.css">
+    <script defer src="script_gallery.js"></script>
+</head>
+<body>
+    <header class="gallery-hero fade-in">
+        <h1>我們的婚紗照</h1>
+        <p>每一張照片，都是愛的見證</p>
+        <div class="buttons">
+            <a href="index.html" class="home-btn">回到首頁</a>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <section class="gallery-section" onclick="toggleGallery('romantic')">
+            <div class="gallery-content scale-up">
+                <img src="image_gar/romantic/2.jpg" class="preview-img">
+                <div class="text-container">
+                    <h2>海與森林</h2>
+                    <p>夢幻柔和的色調，細膩記錄愛的每一刻，感受最純粹的幸福。</p>
+                </div>
+            </div>
+            <div id="romantic-gallery" class="expanded-gallery"></div>
+        </section>
+
+        <section class="gallery-section" onclick="toggleGallery('alley')">
+            <div class="gallery-content scale-up">
+                <img src="image_gar/alley/3.jpg" class="preview-img">
+                <div class="text-container">
+                    <h2>復古巷弄</h2>
+                    <p>巷弄間的細膩光影，捕捉城市裡的浪漫與回憶，低調卻深情。</p>
+                </div>
+            </div>
+            <div id="alley-gallery" class="expanded-gallery"></div>
+        </section>
+
+        <section class="gallery-section" onclick="toggleGallery('funny')">
+            <div class="gallery-content scale-up">
+                <img src="image_gar/funny/5.jpg" class="preview-img">
+                <div class="text-container">
+                    <h2>搞怪俏皮</h2>
+                    <p>最真實的笑容，最無厘頭的瞬間，紀錄愛的俏皮與快樂。</p>
+                </div>
+            </div>
+            <div id="funny-gallery" class="expanded-gallery"></div>
+        </section>
+    </main>
+
+    <div id="fullscreen-container" class="fullscreen-container">
+        <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+        <img id="fullscreen-img" class="fullscreen-img">
+        <div class="thumbnail-container" id="thumbnail-container"></div>
+        <button class="nav-btn left-btn" onclick="prevImage()">&#10094;</button>
+        <button class="nav-btn right-btn" onclick="nextImage()">&#10095;</button>
+        <a id="download-btn" class="download-btn" download>
+            <img src="icons/download-icon.png" alt="下載">
+        </a>
+    </div>
+</body>
+</html>

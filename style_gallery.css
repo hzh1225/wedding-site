@@ -1,0 +1,361 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.gallery-hero {
+    background: url('images/S__112844939_0.jpg') center/cover no-repeat;
+    padding: 50px 0;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-section {
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-section:hover {
+    transform: scale(1.05);
+}
+
+.gallery-content {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.89);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.expanded-gallery {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.fullscreen-container {
+    display: none;
+    flex-direction: column; /* **修正：垂直排列，讓縮圖在下方** */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fullscreen-img {
+    max-width: 90vw; /* 限制最大寬度 */
+    max-height: 80vh; /* 限制最大高度 */
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-btn:hover {
+    background: #555;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+/* 下載按鈕放在關閉按鈕左側 */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 50px; /* 原本 30px，往左移 */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
+
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.thumbnail-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumbnail-img:hover {
+    transform: scale(1.2);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.download-btn {
+    position: absolute;
+    top: 10px;
+    right: 70px; /* **修正：讓下載按鈕往左移** */
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.download-btn img {
+    width: 30px; /* 控制下載圖示大小 */
+    height: auto;
+}
+
+/* .download-btn {
+    position: absolute;
+    bottom: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+} */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 縮略圖網格樣式 */
+.thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 全屏容器更新 */
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 90%;
+    overflow-x: auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.thumbnail-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.6;
+}
+
+.thumbnail-img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.thumbnail-img.active {
+    opacity: 1;
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+
+/* 導航按鈕 */
+.nav-btn {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.left-btn {
+    left: 20px;
+}
+
+.right-btn {
+    right: 20px;
+}
+
+/* 下載按鈕 */
+.download-btn {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.download-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 關閉按鈕 */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ddd;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .thumbnails-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .thumbnail img {
+        height: 100px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .fullscreen-img {
+        max-height: 60vh;
+    }
+    
+    .thumbnail-img {
+        width: 60px;
+        height: 45px;
+    }
+}
+
+.text-container {
+    text-align: left;
+    font-size: 1.2em; /* 調整大小 */
+    color: #353434; /* 可調整顏色 */
+    margin-left: 20px;
+    
+}
