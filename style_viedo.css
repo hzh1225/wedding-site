@@ -1,0 +1,70 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.gallery-hero {
+    background: url('images/viedo2-0.jpg') center/cover no-repeat;
+    padding: 50px 0;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-section {
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-section:hover {
+    transform: scale(1.05);
+}
+
+.gallery-content {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.89);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-btn:hover {
+    background: #555;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 1.0rem;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
