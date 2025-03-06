@@ -1,0 +1,43 @@
+{
+    "romantic": [
+        "image_gar/romantic/0.jpg",
+        "image_gar/romantic/1.jpg",
+        "image_gar/romantic/2.jpg",
+        "image_gar/romantic/3.jpg",
+        "image_gar/romantic/4.jpg",
+        "image_gar/romantic/5.jpg",
+        "image_gar/romantic/6.jpg",
+        "image_gar/romantic/7.jpg",
+        "image_gar/romantic/8.jpg",
+        "image_gar/romantic/9.jpg",
+        "image_gar/romantic/10.jpg",
+        "image_gar/romantic/11.jpg",
+        "image_gar/romantic/12.jpg",
+        "image_gar/romantic/13.jpg",
+        "image_gar/romantic/14.jpg",
+        "image_gar/romantic/15.jpg",
+        "image_gar/romantic/16.jpg",
+        "image_gar/romantic/17.jpg",
+        "image_gar/romantic/18.jpg"
+    ],
+    "alley": [
+        "image_gar/alley/0.jpg",
+        "image_gar/alley/1.jpg",
+        "image_gar/alley/2.jpg",
+        "image_gar/alley/3.jpg",
+        "image_gar/alley/4.jpg",
+        "image_gar/alley/5.jpg",
+        "image_gar/alley/6.jpg"
+    ],
+    "funny": [
+        "image_gar/funny/1.jpg",
+        "image_gar/funny/2.jpg",
+        "image_gar/funny/3.jpg",
+        "image_gar/funny/4.jpg",
+        "image_gar/funny/5.jpg",
+        "image_gar/funny/6.jpg",
+        "image_gar/funny/7.jpg",
+        "image_gar/funny/8.jpg",
+        "image_gar/funny/9.jpg"
+    ]
+}

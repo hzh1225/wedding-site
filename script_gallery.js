@@ -233,22 +233,34 @@ function toggleGallery(category) {
 // 從伺服器獲取圖片列表
 async function fetchImages(category) {
     try {
-        const response = await fetch(`get_images.php?category=${category}`);
-        if (!response.ok) {
-            throw new Error(`HTTP 錯誤: ${response.status}`);
-        }
+        const response = await fetch("imagesGar.json");
+        if (!response.ok) throw new Error("無法載入圖片");
+
         const data = await response.json();
-        
-        if (data.error) {
-            throw new Error(data.error);
-        }
-        
-        return data;
+        return data[category] || [];
     } catch (error) {
-        console.error('獲取圖片時出錯:', error);
-        throw error;
+        console.error("獲取圖片時出錯:", error);
+        return [];
     }
 }
+// async function fetchImages(category) {
+//     try {
+//         const response = await fetch(`gallery_getImage.php?category=${category}`);
+//         if (!response.ok) {
+//             throw new Error(`HTTP 錯誤: ${response.status}`);
+//         }
+//         const data = await response.json();
+        
+//         if (data.error) {
+//             throw new Error(data.error);
+//         }
+        
+//         return data;
+//     } catch (error) {
+//         console.error('獲取圖片時出錯:', error);
+//         throw error;
+//     }
+// }
 
 // 顯示全屏圖片
 function showFullscreen(imageSrc, index) {
