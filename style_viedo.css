@@ -68,3 +68,89 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* 影片區塊設計 */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 30px;
+    /* background: rgba(88, 30, 30, 0.438); */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-block {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-block:hover {
+    transform: scale(1.03);
+}
+
+/* 影片樣式 */
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 預設為橫向影片比例 */
+    position: relative;
+    background: black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container iframe,
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 針對直向影片 */
+.video-container.vertical {
+    aspect-ratio: 9 / 16; /* 直向影片比例 */
+}
+
+/* 當視窗變窄時，確保影片不會超出區塊 */
+@media (max-width: 600px) {
+    .video-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .video-container {
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-container.vertical {
+        aspect-ratio: 9 / 16;
+    }
+}
+
+/* 影片文字內容 */
+.video-text {
+    margin-top: 15px;
+}
+
+.video-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.video-text p {
+    font-size: 1rem;
+    color: #555;
+}

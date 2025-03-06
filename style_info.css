@@ -14,43 +14,10 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.gallery-section {
-    width: 80%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery-section:hover {
-    transform: scale(1.05);
-}
-
-.gallery-content {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.89);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.home-btn:hover {
-    background: #555;
 }
 
 .home-btn {
@@ -59,14 +26,71 @@ body {
     background: #333;
     color: white;
     text-decoration: none;
-    font-size: 1.0rem;
+    font-size: 1rem;
     border-radius: 30px;
     transition: 0.3s;
 }
 
+.home-btn:hover {
+    background: #555;
+}
 
+/* 區塊設計 */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
 
+.info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+.info-block img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.info-text h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.info-text p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 動畫效果 */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.parking-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 100px;  /* 調整為適當大小 */
+    height: auto;
+    max-width: 100%; /* 確保不會超出容器 */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
