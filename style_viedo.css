@@ -122,6 +122,7 @@ body {
 /* 針對直向影片 */
 .video-container.vertical {
     aspect-ratio: 9 / 16; /* 直向影片比例 */
+    margin-bottom: 20px; /* 影片間距 */
 }
 
 /* 當視窗變窄時，確保影片不會超出區塊 */
